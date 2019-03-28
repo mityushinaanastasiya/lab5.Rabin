@@ -1,0 +1,7 @@
+D:\4course\8 term\Protection of information\lab5.Rabin\bin\Debug\lab5.Rabin.exe.config
+D:\4course\8 term\Protection of information\lab5.Rabin\bin\Debug\lab5.Rabin.exe
+D:\4course\8 term\Protection of information\lab5.Rabin\bin\Debug\lab5.Rabin.pdb
+D:\4course\8 term\Protection of information\lab5.Rabin\obj\Debug\lab5.Rabin.csprojAssemblyReference.cache
+D:\4course\8 term\Protection of information\lab5.Rabin\obj\Debug\lab5.Rabin.csproj.CoreCompileInputs.cache
+D:\4course\8 term\Protection of information\lab5.Rabin\obj\Debug\lab5.Rabin.exe
+D:\4course\8 term\Protection of information\lab5.Rabin\obj\Debug\lab5.Rabin.pdb
