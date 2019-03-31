@@ -66,18 +66,17 @@ namespace lab5.Rabin
 
                 BigInteger m1, m2, m3, m4, a, b, M1, M2, M3, M4;
                 m1 = BigInteger.ModPow(C, (p + 1) / 4, p);
-                m2 = BigInteger.ModPow(subtraction(BigInteger.ModPow(p, 1, p), m1, p), 1, p);
+                m2 = p - m1;
                 m3 = BigInteger.ModPow(C, (q + 1) / 4, q);
-                m4 = BigInteger.ModPow(subtraction(BigInteger.ModPow(q, 1, q), m3, q), 1, q);
-                a = BigInteger.Multiply(q, BigInteger.ModPow(q, p - 2, p));
-                b = BigInteger.Multiply(p, BigInteger.ModPow(p, q - 2, q));
-                M1 = BigInteger.ModPow(BigInteger.Multiply(a, m1) + BigInteger.Multiply(b, m3), 1, OpenyKey);
-                M2 = BigInteger.ModPow(BigInteger.Multiply(a, m1) + BigInteger.Multiply(b, m4), 1, OpenyKey);
-                M3 = BigInteger.ModPow(BigInteger.Multiply(a, m2) + BigInteger.Multiply(b, m3), 1, OpenyKey);
-                M4 = BigInteger.ModPow(BigInteger.Multiply(a, m2) + BigInteger.Multiply(b, m4), 1, OpenyKey);
+                m4 = q - m3;
+                a = q * BigInteger.ModPow(q, p - 2, p);
+                b = p *BigInteger.ModPow(p, q - 2, q);
+                M1 = (BigInteger.Multiply(a, m1) + BigInteger.Multiply(b, m3)) % OpenyKey;
+                M2 = (BigInteger.Multiply(a, m1) + BigInteger.Multiply(b, m4)) % OpenyKey;
+                M3 = (BigInteger.Multiply(a, m2) + BigInteger.Multiply(b, m3)) % OpenyKey;
+                M4 = (BigInteger.Multiply(a, m2) + BigInteger.Multiply(b, m4)) % OpenyKey;
                 streamWriter.Write("M1="); streamWriter.Write(M1); streamWriter.Write(" M2="); streamWriter.Write(M2); streamWriter.Write(" M3=");
                 streamWriter.Write(M3); streamWriter.Write(" M4="); streamWriter.Write(M4); streamWriter.WriteLine();
-
             }
             streamWriter.Close();
         }

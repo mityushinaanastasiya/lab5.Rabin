@@ -18,6 +18,6 @@ namespace lab5.Rabin
             {
                 Console.WriteLine(e.Message);
             }  
-    }
+        }
     }
 }
