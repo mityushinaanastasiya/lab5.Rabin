@@ -11,7 +11,7 @@ namespace lab5.Rabin
             try
             {
                 Rabin.EncryptionBigText();
-                //Rabin.DecryptionBigText();
+                Rabin.DecryptionBigText();
 
             }
             catch (Exception e)
